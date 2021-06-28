@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tic tac toe</title>
+    <style>
+        table {
+            font-size: 36pt;
+            font-family: monospace;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        #r1c1, #r1c2, #r1c3,
+        #r2c1, #r2c2, #r2c3 {
+            border-bottom: 3px solid black
+        }
+
+        #r1c1, #r1c2,
+        #r2c1, #r2c2,
+        #r3c1, #r3c2 {
+            border-right: 3px solid black
+        }
+    </style>
+</head>
+<body>
+<noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+<script src="./bootstrap.js"></script>
+<h3 id="status"></h3>
+
+<table>
+    <tr>
+        <td id="r1c1">?</td>
+        <td id="r1c2">?</td>
+        <td id="r1c3">?</td>
+    </tr>
+    <tr>
+        <td id="r2c1">?</td>
+        <td id="r2c2">?</td>
+        <td id="r2c3">?</td>
+    </tr>
+    <tr>
+        <td id="r3c1">?</td>
+        <td id="r3c2">?</td>
+        <td id="r3c3">?</td>
+    </tr>
+</table>
+
+<label for="ai-difficulty">AI level:</label><select id="ai-difficulty">
+    <option label="Easy" value="0"></option>
+    <option label="Medium" value="1"></option>
+    <option label="Hard" value="2"></option>
+    <option label="Unbeatable" value="3"></option>
+</select>
+<button id="ai">Move</button>
+
+<button id="restart" style="display: none">Restart</button>
+
+</body>
+</html>
